@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+            #header{
+        width:100%;
+        margin: auto;
+        height:70px;
+        color: white;
+        display: flex;
+        background-color: rgb(0, 53, 128) ;
+        gap:700px;
+        justify-content: space-evenly;
+      }
+      #header>h3{
+        padding-top: 5px;
+      }
+      #header img {
+    border-radius: 100%;
+    margin-top: 10px;
+    height: 30px;
+    width: 30px;
+}
+      #container {
+        width: fit-content;
+        padding: 50px;
+        font-size: 20px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        margin: auto;
+        margin-top: 50px;
+      }
+      input {
+        width: 100%;
+        padding-top: 10px;
+        margin: 5px 0px 15px 0px;
+        border-radius: 4px;
+      }
+
+      button {
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header">
+      <h3>MAKE YOUR TRIP</h3>
+      <a href=""><img
+          src="https://cf.bstatic.com/static/img/flags/new/48-squared/in/20aa535a5d3c505dd02fea275ed1a36c0fb1fe08.png"></a>
+    </div>
+    <div id="container">
+      <form>
+        <label for="">Full Name</label><br />
+        <input type="text" id="name" /><br />
+        <label for="">E-mail</label><br />
+        <input type="email" id="email" /><br />
+        <label for="">Password</label><br />
+        <input type="password" id="pass" /><br />
+        <label for="">Mobile Number</label><br />
+        <input type="number" id="mob" /><br />
+      </form>
+      <center><button onClick="signUp()">SignUp</button></center>
+      <br />
+
+      Already have an account?
+      <a
+        href="C:\Users\hp\Documents\-adroit-horn-5486\SignIn.html"
+        >LOGIN</a
+      >
+    </div>
+
+    <script>
+      let dumyData = {
+        email: null,
+        pass: null,
+      };
+      localStorage.setItem("initialData", JSON.stringify(dumyData));
+      function signUp() {
+        let name = document.querySelector("#name").value;
+        let email = document.querySelector("#email").value;
+        let pass = document.querySelector("#pass").value;
+        let mob = document.querySelector("#mob").value;
+
+        let obj = {
+          name: name,
+          email: email,
+          pass: pass,
+        };
+
+        //localStorage.setItem("userData", JSON.stringify(obj));
+           
+        let data = JSON.parse(localStorage.getItem("initialData"));
+          
+        //localStorage.setItem("mobile", JSON.stringify(mob));
+
+        if (data.email == email && data.pass == pass) {
+          alert("incorect email and password ");
+        } else {
+          localStorage.setItem("initialData", JSON.stringify(obj));
+          alert("signUp Successfully");
+        }
+      }
+      let arr = [];
+      arr = [...arr, obj];
+      localStorage.setItem("alluserData", JSON.stringify(arr));
+    </script>
+  </body>
+</html>
