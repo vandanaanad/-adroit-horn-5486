@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MAKE YOUR TRIP</title>
+    <link rel="stylesheet" href="showFlight.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+
+</head>
+
+<body>
+
+    <div id="container">
+        <div id="header">
+            <div id="header1">
+                <div>
+                    <h2>MAKE YOUR TRIP</h2>
+                </div>
+                <div id="icon">
+                    <a href="">INR</a>
+                    <a href=""><img
+                            src="https://cf.bstatic.com/static/img/flags/new/48-squared/in/20aa535a5d3c505dd02fea275ed1a36c0fb1fe08.png"></a>
+                    <a href="C:\Users\hp\Documents\-adroit-horn-5486\SignUp.html"><button>Register</button></a>
+                    <a href="C:\Users\hp\Documents\-adroit-horn-5486\SignIn.html"><button>Sign in</button></a>
+                </div>
+            </div>
+            <div id="header2">
+                <button><a href=""><i class="fa-solid fa-bed"></i> Stays</a></button>
+                <a href=""><i class="fa-solid fa-jet-fighter-up"></i> Flights </a>
+                <a href=""> <i class="fa-solid fa-heart-circle-bolt"></i> Flight+Hotel</a>
+                <a href=""><i class="fa-solid fa-car"></i> Car Rentals </a>
+                <a href=""> <i class="fa-solid fa-people-line"></i> Attraction</a>
+                <a href=""><i class="fa-solid fa-car-on"></i> Airport Taxis</a>
+            </div>
+
+        </div>
+
+        <div id="search">
+            <div>
+                <select id="sourceCity">
+                    <option value="">From</option>
+                    <option>Lucknow</option>
+                    <option>Delhi</option>
+                    <option>Mumbai</option>
+                    <option>Kolkata</option>
+                    <option>Panjab</option>
+                    <option>Bangalore</option>
+                </select>
+                =>
+                <select id="DesinationCity">
+                    <option value="">To</option>
+                    <option>Goa</option>
+                    <option>Haridwar</option>
+                    <option>Dehradoon</option>
+                    <option>Masoori</option>
+                    <option>Nainital</option>
+                    <option>Kashmir</option>
+                </select>
+            </div>
+            <div><input type="date" /></div>
+            <div><span id=""> - 0 +</span></div>
+            <div><button>Search</button></div>
+        </div>
+        <!-- display flight detail -->
+
+        <div id="mainContainer">
+            <div id="flightData">
+
+                <div id="flight">
+                    <div>
+                        <img src="./images/flightImg.jpg">
+                    </div>
+
+                    <div>
+                        <h2>1:15 PM</h2>
+                        <p>Del Jan 12</p>
+                    </div>
+                    <div>
+                        10 hour
+                        <hr>
+                        Direct
+                    </div>
+                    <div>
+                        <h2>2:25 AM</h2>
+                        <p>Goa Jan 13</p>
+                    </div>
+
+                </div>
+
+                <div>
+                    <i class="fa-sharp fa-solid fa-suitcase-rolling"></i>
+                    <h5>Included: personal item, checked bag</h5>
+                    <h2>
+                        INR2,971.43
+                    </h2>
+                    <h5>Total price for all travelers</h5>
+                    <button>See Flight</button>
+                </div>
+
+            </div>
+
+            <div id="flightData">
+
+                <div id="flight">
+                    <div>
+                        <img src="./images/flightImg.jpg">
+                    </div>
+
+                    <div>
+                        <h2>1:15 PM</h2>
+                        <p>Del Jan 12</p>
+                    </div>
+                    <div>
+                        10 hour
+                        <hr>
+                        Direct
+                    </div>
+                    <div>
+                        <h2>2:25 AM</h2>
+                        <p>Goa Jan 13</p>
+                    </div>
+
+                </div>
+
+                <div>
+                    <i class="fa-sharp fa-solid fa-suitcase-rolling"></i>
+                    <h5>Included: personal item, checked bag</h5>
+                    <h2>
+                        INR2,971.43
+                    </h2>
+                    <h5>Total price for all travelers</h5>
+                    <button>See Flight</button>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+
+
+    const flightData = [{
+        "id": "3126",
+        "From": "Waikambila",
+        "To": "Pokachi",
+        "DepartureTime": "10:15 AM",
+        "Date": "2/21/2022",
+        "DestinatinTime": "12:48 PM"
+    }, {
+        "id": "495",
+        "From": "Gouménissa",
+        "To": "Krapivna",
+        "DepartureTime": "7:02 PM",
+        "Date": "4/16/2022",
+        "DestinatinTime": "10:47 AM"
+    }, {
+        "id": "17",
+        "From": "Perico",
+        "To": "Laocheng",
+        "DepartureTime": "11:53 AM",
+        "Date": "1/17/2022",
+        "DestinatinTime": "4:24 PM"
+    }, {
+        "id": "871",
+        "From": "Eišiškės",
+        "To": "Debar",
+        "DepartureTime": "3:43 PM",
+        "Date": "10/27/2022",
+        "DestinatinTime": "12:09 PM"
+    }, {
+        "id": "130",
+        "From": "Zhangcun",
+        "To": "Užice",
+        "DepartureTime": "11:57 AM",
+        "Date": "8/14/2022",
+        "DestinatinTime": "1:04 PM"
+    }, {
+        "id": "950",
+        "From": "‘Ayn Ḩalāqīm",
+        "To": "Närpes",
+        "DepartureTime": "7:29 PM",
+        "Date": "5/23/2022",
+        "DestinatinTime": "2:06 PM"
+    }, {
+        "id": "6",
+        "From": "Grzmiąca",
+        "To": "Capioví",
+        "DepartureTime": "11:41 AM",
+        "Date": "6/15/2022",
+        "DestinatinTime": "5:49 PM"
+    }, {
+        "id": "0",
+        "From": "Blachownia",
+        "To": "Cigadog",
+        "DepartureTime": "1:05 PM",
+        "Date": "5/25/2022",
+        "DestinatinTime": "5:06 PM"
+    }, {
+        "id": "4505",
+        "From": "Reno",
+        "To": "Cill Airne",
+        "DepartureTime": "6:02 PM",
+        "Date": "4/14/2022",
+        "DestinatinTime": "3:09 PM"
+    }, {
+        "id": "449",
+        "From": "Kampungdesa",
+        "To": "Laon",
+        "DepartureTime": "2:18 PM",
+        "Date": "5/1/2022",
+        "DestinatinTime": "12:52 PM"
+    }]
+
+    function displayFlightDetails() {
+        flightData.forEach((item) => {
+            let mainDiv = document.createElement("div")
+            mainDiv.setAttribute("id", "flightData")
+
+            let mainSubDiv = document.createElement("div")
+            mainSubDiv.setAttribute("id", "flight")
+
+            let subDiv1 = document.createElement("div")
+
+            let img = document.createElement("img")
+            img.src = "./images/flightImg.jpg"
+
+            subDiv1.append(img)
+
+            //  let subDiv2 = document.createElement("div")
+            //  let subDiv3 = document.createElement("div")
+            //  let subDiv4 = document.createElement("div")
+            let startTime = document.createElement("div")
+            let initialTime = document.createElement("h2")
+            initialTime.innerText = (item.DepartureTime)
+            let cityDate = document.createElement("p")
+            cityDate.innerHTML = (item.From + item.Date)
+            startTime.append(initialTime, cityDate)
+
+            let endTime = document.createElement("div")
+            let lastTime = document.createElement("h2")
+            lastTime.innerText = (item.DestinatinTime)
+            let cityDateDest = document.createElement("p")
+            cityDateDest.innerHTML = (item.To + item.Date)
+            endTime.append(lastTime, cityDateDest)
+
+            mainSubDiv.append(subDiv1)
+            mainDiv.append(mainSubDiv, startTime, endTime)
+            let mainCont = document.getElementById("mainContainer")
+            mainCont.append(mainDiv)
+
+
+
+
+        })
+
+    }
+    displayFlightDetails()
+
+
+    function search(){
+      let formData=document.getElementById("sourceCity")
+console.log("yyu",formData)
+
+    }
+    search()
+</script>
