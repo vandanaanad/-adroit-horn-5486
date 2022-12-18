@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MAKE YOUR TRIP</title>
+    <link rel="stylesheet" href="showFlight.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <style>
+        body {
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtAF3j7Lu2IrVK9KEfBAn3SRBVThf0bSNfTQ&usqp=CAU');
+    background-repeat: no-repeat;
+      background-size: cover;
+}
+
+
+   
+      #containerr {
+        width: fit-content;
+        padding: 50px;
+        font-size: 20px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        margin: auto;
+        margin-top: 50px;
+      }
+      input {
+        width: 100%;
+        padding-top: 10px;
+        margin: 5px 0px 15px 0px;
+        border-radius: 4px;
+      }
+
+      button {
+        padding: 10px;
+      }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="header">
+            <div id="header1">
+                <div>
+                 <h2>MAKE YOUR TRIP</h2>
+                </div>
+                <div id="icon">
+                    <a href="">INR</a>
+                    <a href=""><img
+                            src="https://cf.bstatic.com/static/img/flags/new/48-squared/in/20aa535a5d3c505dd02fea275ed1a36c0fb1fe08.png"></a>
+                    <a href="C:\Users\hp\Documents\-adroit-horn-5486\SignUp.html"><button>Register</button></a>
+                    <a href="C:\Users\hp\Documents\-adroit-horn-5486\SignIn.html"><button>Sign in</button></a>
+                </div>
+            </div>
+            <div id="header2">
+                <button><a href="./index.html"><i class="fa-solid fa-bed"></i>Home</a></button>
+                <a href=""><i class="fa-solid fa-jet-fighter-up"></i> Flights </a>
+                <a href=""> <i class="fa-solid fa-heart-circle-bolt"></i> Flight+Hotel</a>
+                <a href=""><i class="fa-solid fa-car"></i> Car Rentals </a>
+                <a href=""> <i class="fa-solid fa-people-line"></i> Attraction</a>
+                <a href=""><i class="fa-solid fa-car-on"></i> Airport Taxis</a>
+            </div>
+        </div>
+     
+<div id="containerr">
+    <form>
+        <label for="">Full Name</label><br />
+        <input type="text" id="name" /><br />
+        <label for="">Address</label><br />
+        <input type="Address" id="Address" /><br />
+        <label for="">AddharNumber</label><br />
+        <input type="AddharNumber" id="AddharNumber" /><br />
+        <label for="">Mobile Number</label><br />
+        <input type="number" id="mob" /><br />
+    </form>
+    <center><button onClick="signUp()"><a href="./index.html">Submit</a></button></center>
+    <br />
+
+    Pay your Payment
+    <a href="">Payment</a>
+</div>
+</div>
+
+
+        </body>
+        </html>
+        <script>
+    let dumyData = {
+        email: null,
+        pass: null,
+    };
+    localStorage.setItem("initialData", JSON.stringify(dumyData));
+    function signUp() {
+        let name = document.querySelector("#name").value;
+        let Address = document.querySelector("#Address").value;
+        let AddharNumber = document.querySelector("#AddharNumber").value;
+        let mob = document.querySelector("#mob").value;
+
+        let obj = {
+            name: name,
+            AddharNumber: AddharNumber,
+            mob: mob,
+        };
+
+        //localStorage.setItem("userData", JSON.stringify(obj));
+
+        let data = JSON.parse(localStorage.getItem("initialData"));
+
+        //localStorage.setItem("mobile", JSON.stringify(mob));
+
+        // if (data.AddharNumber == AddharNumber && data.mob == mob) {
+        //    // alert("incorect email and password ");
+        // } else {
+            localStorage.setItem("initialData", JSON.stringify(obj));
+            alert("Your Booking is Successfully");
+        //}
+    }
+    let arr = [];
+    arr = [...arr, obj];
+    localStorage.setItem("alluserData", JSON.stringify(arr));
+        </script>

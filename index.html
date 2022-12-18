@@ -26,8 +26,8 @@
             </div>
         </div>
         <div id="header2">
-            <button><a href=""><i class="fa-solid fa-bed"></i>    Stays</a></button>
-            <a href=""><i class="fa-solid fa-jet-fighter-up"></i>   Flights </a>
+            <button><a href=""><i class="fa-solid fa-bed"></i>  Home</a></button>
+            <a href="showFlight.html"><i class="fa-solid fa-jet-fighter-up"></i>   Flights </a>
             <a href=""> <i class="fa-solid fa-heart-circle-bolt"></i>     Flight+Hotel</a>
             <a href=""><i class="fa-solid fa-car"></i>    Car Rentals </a>
             <a href=""> <i class="fa-solid fa-people-line"></i>    Attraction</a>
@@ -39,12 +39,7 @@
         </div>
     </div>
 <!-- search part -->
-        <div id="search">
-            <div><input type="text"   placeholder="Where are you going?"></div>
-            <div><div>Check-in Date<input type="date"/></div><div>Check-out Date<input type="date"/></div></div>
-            <div><span id="">0</span></div>
-            <div><button>Search</button></div>
-         </div>
+        
     <!-- Offer      -->
         <div id="offer">
             <h1>Offer</h1>
@@ -54,7 +49,7 @@
  <!-- browse -->
 <h2 style="margin-left: 140px;">Browse by property type</h2>
         <div id="browse">
-            <div><img src="https://q-xx.bstatic.com/xdata/images/xphoto/300x240/57584488.jpeg?k=d8d4706fc72ee789d870eb6b05c0e546fd4ad85d72a3af3e30fb80ca72f0ba57&o=">
+            <div><a href="hotelbook.html"><img src="https://q-xx.bstatic.com/xdata/images/xphoto/300x240/57584488.jpeg?k=d8d4706fc72ee789d870eb6b05c0e546fd4ad85d72a3af3e30fb80ca72f0ba57&o="></a>
             <h3>Hotels</h3>
             <p>921,963</p>
             </div>
@@ -104,9 +99,9 @@
 
     <!-- poster -->
     <div id="poster">
-        <div><img src="https://cf.bstatic.com/xdata/images/city/max500/687163.webp?k=0c6630c2ae631108dda22f3c9ba147046178b9b2e3dbceb5fff4645b67bd0035&o="></div>
-        <div><img src="https://cf.bstatic.com/xdata/images/city/max500/687085.webp?k=645bb506977f5e70c2442a70594bf637abd386bcf2352f086aa0d4daba2c33d6&o="></div>
-        <div><img src="https://cf.bstatic.com/xdata/images/city/max500/687393.webp?k=853d5922b5ef8c7beca6d77a5fd906ccba3521056048b46eab88d147b3c4efa9&o="></div>
+        <div><a href="./bookNow.html"><img src="https://cf.bstatic.com/xdata/images/city/max500/687163.webp?k=0c6630c2ae631108dda22f3c9ba147046178b9b2e3dbceb5fff4645b67bd0035&o="></a></div>
+        <div><a href="./bookNow.html"><img src="https://cf.bstatic.com/xdata/images/city/max500/687085.webp?k=645bb506977f5e70c2442a70594bf637abd386bcf2352f086aa0d4daba2c33d6&o="></a></div>
+        <div><a href="./bookNow.html"><img src="https://cf.bstatic.com/xdata/images/city/max500/687393.webp?k=853d5922b5ef8c7beca6d77a5fd906ccba3521056048b46eab88d147b3c4efa9&o="></a></div>
     </div>
 
 
@@ -217,8 +212,9 @@ home -->
     <div>
         <h1>Get instant discounts</h1>
         <h4>Simply sign into your Booking.com account and look for the <br>blue Genius logo to save</h4>
-       <button>Register</button>
-       <button>Sign in</button>
+     <button><a href="./SignUp.html">Register</a></button>
+        <button><a href="./SignIn.html">
+            Sign in</a></button>
     </div>
  </div>
 
@@ -233,7 +229,7 @@ home -->
  <!-- destination -->
  <div id="destination">
     <div>
-        <a href="">Tenerife</a>
+        <a href="https://en.wikipedia.org/wiki/Delhi">Delhi</a>
         <p>9,619 properties</p>
         <a href="">Cornwall</a>
         <p>5,280 properties</p>
@@ -298,7 +294,7 @@ home -->
     <h1>Save time, save money!</h1>
     <h3>Sign up and we'll send the best deals to you</h3>
     <input type="email" placeholder="Your Email">
-    <button>Subscribe</button>
+    <button onclick="subscribe()">Subscribe</button>
 </div>
 
 
@@ -325,3 +321,9 @@ home -->
 </body>
 
 </html>
+
+<script>
+    function subscribe() {
+       window.alert("Thanks for the Subscribes");
+    }
+</script>

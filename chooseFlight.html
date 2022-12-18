@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MAKE YOUR TRIP</title>
+    <link rel="stylesheet" href="showFlight.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+</head>
+
+<body>
+    <div id="container">
+        <div id="header">
+            <div id="header1">
+                <div>
+                    <h2>MAKE YOUR TRIP</h2>
+                </div>
+                <div id="icon">
+                    <a href="">INR</a>
+                    <a href=""><img
+                            src="https://cf.bstatic.com/static/img/flags/new/48-squared/in/20aa535a5d3c505dd02fea275ed1a36c0fb1fe08.png"></a>
+                    <a href="C:\Users\hp\Documents\-adroit-horn-5486\SignUp.html"><button>Register</button></a>
+                    <a href="C:\Users\hp\Documents\-adroit-horn-5486\SignIn.html"><button>Sign in</button></a>
+                </div>
+            </div>
+            <div id="header2">
+                <button><a href="./index.html"><i class="fa-solid fa-bed"></i> Home</a></button>
+                <a href="./showFlight.html"><i class="fa-solid fa-jet-fighter-up"></i> Flights </a>
+                <a href=""> <i class="fa-solid fa-heart-circle-bolt"></i> Flight+Hotel</a>
+                <a href=""><i class="fa-solid fa-car"></i> Car Rentals </a>
+                <a href=""> <i class="fa-solid fa-people-line"></i> Attraction</a>
+                <a href=""><i class="fa-solid fa-car-on"></i> Airport Taxis</a>
+            </div>
+        </div>
+        <div id="flightcard">
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script>
+    let arr = []
+    let getflydata = JSON.parse(localStorage.getItem("flydata"))
+    console.log("jaagsg", getflydata)
+    arr.push(getflydata);
+
+
+    function displayFlightDetails(data) {
+        document.querySelector("#flightcard")
+        data.forEach((item) => {
+            let mainDiv = document.createElement("div")
+            mainDiv.setAttribute("id", "flightData")
+
+            let mainSubDiv = document.createElement("div")
+            mainSubDiv.setAttribute("id", "flight")
+
+            let subDiv1 = document.createElement("div")
+
+            let img = document.createElement("img")
+            img.src = "./images/flightImg.jpg"
+
+            subDiv1.append(img)
+            let startTime = document.createElement("div")
+            let initialTime = document.createElement("h2")
+            initialTime.innerText = (item.DepartureTime)
+            let cityDate = document.createElement("p")
+            cityDate.innerHTML = (item.From + item.Date)
+            startTime.append(initialTime, cityDate)
+
+            let endTime = document.createElement("div")
+            let lastTime = document.createElement("h2")
+            lastTime.innerText = (item.DestinatinTime)
+            let cityDateDest = document.createElement("p")
+            cityDateDest.innerHTML = (item.To + item.Date)
+            endTime.append(lastTime, cityDateDest)
+
+            mainSubDiv.append(subDiv1)
+
+
+              let btn = document.createElement("button");
+            let a = document.createElement("a")
+            a.textContent = "Book Now"
+            a.setAttribute('href', 'bookNow.html')
+            btn.append(a)
+
+            //  a.setAttribute("href","chooseFlight.html")
+            //btn.append(a)
+            //btn.innerHTML= "See Flight"
+            btn.addEventListener('click', function () {
+                clickbtn(item)
+        
+            
+
+            })
+
+            mainDiv.append(mainSubDiv, startTime, endTime,btn)
+            let mainCont = document.getElementById("flightcard")
+            mainCont.append(mainDiv)
+
+        })
+       
+
+
+
+       function clickbtn(ele) {
+            console.log("hhhh", ele)
+            //let k = localStorage.setItem('flydata', JSON.stringify(ele))
+            //console.log(k)
+
+        }
+
+
+    }
+
+
+
+    displayFlightDetails(arr)
+</script>
